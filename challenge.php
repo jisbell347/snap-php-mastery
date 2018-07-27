@@ -58,9 +58,9 @@ class Dog {
 $beagle = new Dog(8, false, 'Shadow');
 $husky = new Dog(2, true, "Snow");
 
-function calculateDogAge($dogAge) {
-	$peopleAge = $dogAge * 7;
+function calculateDogAge(Dog $dogAge) {
+	$peopleAge = $dogAge->getAge() * 7;
 
 	return($peopleAge);
 }
- echo $beagle->getName() . " is " . calculateDogAge($beagle->getAge()) . " years old in human years!";
+ echo $beagle->getName() . " is " . calculateDogAge($beagle) . " years old in human years!";
